@@ -20,6 +20,9 @@ class moduleManager
 
         if(self::checkModule($name)){
                require MODULES . $name . '/' . $name . 'Module.php';
+               $moduleName = $name . 'Module';
+               $module = new $moduleName();
+
         }else{
                echo "Неверный путь";
         }
@@ -45,7 +48,8 @@ class moduleManager
     public static function registrationModules()
     {
         self::$modules = array(
-            'index' => MODULES . 'index/indexModule.php'
+            'index',
+            'news'
         );
     }
 }
