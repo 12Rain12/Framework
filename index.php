@@ -1,12 +1,12 @@
 <?php
 
 require 'config.php';
-require CORE . 'bootstrap.php';
-require CORE . 'ModuleManager.php';
-require BASE . 'Controller.php';
-require BASE . 'Model.php';
-require BASE . 'View.php';
-require LIBS . 'DB.class.php';
+require 'core/bootstrap.php';
+require 'core/ModuleManager.php';
+require 'base/Controller.php';
+require 'base/Model.php';
+require 'base/View.php';
+require 'libs/DB.class.php';
 
 $app = new bootstrap();
 ?>

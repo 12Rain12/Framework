@@ -10,7 +10,6 @@ class bootstrap
         $url = explode('/', $url);
 
         moduleManager::registrationModules();
-        moduleManager::checkModule($url[0]);
         moduleManager::LoadModule($url[0]);
     }
 }

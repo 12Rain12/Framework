@@ -8,12 +8,19 @@ class Controller
      */
     function __construct()
     {
-        $this->view = new View();
+
+    }
+
+    public function render($name)
+    {
+        require 'Views/header.php';
+        require 'modules/' . $name .  '/views/' . $name . '.php';
+        require 'Views/footer.php';
     }
 
     public function loadModel($nameModule, $name)
     {
-        $file = MODULES . $nameModule . '/model/' . $name . '.php';
+        $file = 'modules/' . $nameModule . '/model/' . $name . '.php';
         if(file_exists($file)){
             require $file;
         }else{
