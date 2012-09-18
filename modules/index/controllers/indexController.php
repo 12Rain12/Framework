@@ -10,7 +10,7 @@ function __construct()
 
 public function index()
 {
-    $this->View->render('index');
+    $this->View->render('index', 'index');
 }
 
 }

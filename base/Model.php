@@ -2,14 +2,15 @@
 
 class Model
 {
-    public static $db;
+
+    static $db;
 
     private static $_config;
 
     /*
      * Массив с параметрами для БД
      */
-    public $param = array();
+    static $param = array();
 
     public function __construct()
     {

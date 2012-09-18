@@ -2,13 +2,14 @@
 
 class Controller
 {
+
     /**
      * Подгружаем модель по имени
      * @param $name имя модели
      */
     function __construct()
     {
-    $this->View = new View();
+        $this->View = new View();
     }
 
 

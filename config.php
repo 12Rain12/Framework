@@ -17,7 +17,7 @@ return array(
     /**
      * Массив доступных модулей
      */
-    'url' => array(
+    'Module' => array(
         'index',
         'news'
     )
