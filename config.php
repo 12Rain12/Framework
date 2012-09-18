@@ -1,12 +1,25 @@
 <?php
 
-
-
-
-/**
- * Массив доступных модулей
- */
 return array(
-    'index',
-    'news'
+
+
+    /**
+     * Данные для БД
+     */
+    'DB' =>  array(
+        'user'=>'root',
+        'pass'=>'123',
+        'host'=>'localhost',
+        'name'=>'Framework'
+    ),
+
+
+    /**
+     * Массив доступных модулей
+     */
+    'url' => array(
+        'index',
+        'news'
+    )
+
 );

@@ -8,15 +8,10 @@ class Controller
      */
     function __construct()
     {
-
+    $this->View = new View();
     }
 
-    public function render($name)
-    {
-        require 'Views/header.php';
-        require 'modules/' . $name .  '/views/' . $name . '.php';
-        require 'Views/footer.php';
-    }
+
 
     public function loadModel($nameModule, $name)
     {

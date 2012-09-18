@@ -2,10 +2,25 @@
 
 class Model
 {
-    public $db;
+    public static $db;
+
+    private static $_config;
+
+    /*
+     * Массив с параметрами для БД
+     */
+    public $param = array();
 
     public function __construct()
     {
-    $this->db =  DB::connect('localhost', 'root', '123', 'Framework');
+        self::$param = Model::paramBD();
+        $this->db =  DB::connect(self::$param['host'], self::$param['user'], self::$param['pass'], self::$param['name']);
     }
+
+    public static function paramBD()
+    {
+        self::$_config = require '../config.php';
+        return self::$_config['DB'];
+    }
+
 }

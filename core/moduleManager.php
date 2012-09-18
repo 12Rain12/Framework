@@ -3,6 +3,8 @@
 class moduleManager
 {
 
+    public static $check;
+
     /**
      * @var $modules Массив модулей
      */
@@ -80,9 +82,9 @@ class moduleManager
     {
         foreach(self::getTotalArrayUrl() as $key => $value){
             if(preg_match($value, $url)){
-                $check = true;
+                self::$check = true;
             }
         }
-        return $check;
+        return self::$check;
     }
 }

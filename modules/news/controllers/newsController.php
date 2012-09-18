@@ -9,6 +9,6 @@ class newsController extends Controller
 
     public function index()
     {
-        $this->render('index');
+        $this->View->render('index');
     }
 }

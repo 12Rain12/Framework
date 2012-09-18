@@ -10,8 +10,8 @@ class View
 
     public function render($name)
     {
-        require VIEWS . 'header.php';
-        require MODULES . $name .  '/views/' . $name . '.php';
-        require VIEWS . 'footer.php';
+        require 'Views/header.php';
+        require 'modules/' . $name .  '/views/' . $name . '.php';
+        require 'Views/footer.php';
     }
 }
