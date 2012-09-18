@@ -55,9 +55,7 @@ class moduleManager
     public static function registrationModules()
     {
         $routes = require 'config.php';
-        foreach($routes as $value){
-            self::$modules[] = $value;
-        }
+        self::$modules = $routes['Module'];
     }
 
 
@@ -67,7 +65,7 @@ class moduleManager
      */
     public static function getTotalArrayUrl()
     {
-        foreach(self::$modules as $key => $value){
+        foreach(self::$modules as $value){
             $routes = require 'modules/' . $value . '/routes.php';
             self::$totalArray = array_merge_recursive (self::$totalArray, $routes);
         }
@@ -87,4 +85,6 @@ class moduleManager
         }
         return self::$check;
     }
+
+
 }
