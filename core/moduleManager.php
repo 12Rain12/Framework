@@ -21,10 +21,6 @@ class moduleManager
      */
     public static  function LoadModule($name)
     {
-        if(empty($name)){
-            $name = 'index';
-        }
-
         if(self::checkModule($name) && self::checkUrl($name)){
                require 'modules/' . $name . '/' . $name . 'Module.php';
                $moduleName = $name . 'Module';
@@ -85,6 +81,4 @@ class moduleManager
         }
         return self::$check;
     }
-
-
 }

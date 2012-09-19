@@ -14,9 +14,9 @@ class Controller
 
 
 
-    public function loadModel($nameModule, $name)
+    public function loadModel($name)
     {
-        $file = 'modules/' . $nameModule . '/model/' . $name . '.php';
+        $file = 'modules/' . $name . '/model/' . $name . '.php';
         if(file_exists($file)){
             require $file;
         }else{

@@ -6,6 +6,8 @@ class newsModule
     {
         require 'controllers/newsController.php';
         $controller = new newsController();
+        $controller->loadModel('news');
         $controller->index();
+
     }
 }

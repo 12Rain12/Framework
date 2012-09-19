@@ -11,4 +11,9 @@ class newsController extends Controller
     {
         $this->View->render('index', 'news');
     }
+
+    public function loadNews()
+    {
+
+    }
 }

@@ -8,13 +8,5 @@ require 'base/Model.php';
 require 'base/View.php';
 require 'libs/DB.class.php';
 require 'libs/Smarty/Smarty.class.php';
-require 'libs/article.class.php';
 
 $app = new bootstrap();
-?>
-<html>
-    <meta charset = utf8>
-</html>
-
-
-

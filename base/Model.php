@@ -3,7 +3,7 @@
 class Model
 {
 
-    static $db;
+    public $db;
 
     private static $_config;
 

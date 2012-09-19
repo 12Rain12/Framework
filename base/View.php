@@ -11,8 +11,8 @@ class View
 
     public function render($name, $moduleName)
     {
-        require 'Views/header.php';
+        require 'Views/header.tpl';
         $this->smarty->display('modules/' . $moduleName .  '/views/' . $name . '.tpl');
-        require 'Views/footer.php';
+        require 'Views/footer.tpl';
     }
 }
