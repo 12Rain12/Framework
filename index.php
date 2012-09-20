@@ -7,6 +7,7 @@ require 'base/Controller.php';
 require 'base/Model.php';
 require 'base/View.php';
 require 'libs/DB.class.php';
+require 'libs/validation.class.php';
 require 'libs/Smarty/Smarty.class.php';
 
 $app = new bootstrap();

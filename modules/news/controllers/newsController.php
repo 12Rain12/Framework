@@ -9,8 +9,14 @@ class newsController extends Controller
 
     public function index()
     {
-        $this->View->render('index', 'news');
+        $this->render('index');
     }
 
+    public function create()
+    {
+        $this->render('create');
+        if($_POST['act']){
 
+        }
+    }
 }

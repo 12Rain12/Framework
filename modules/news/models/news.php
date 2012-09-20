@@ -1,6 +1,6 @@
 <?php
 
-class newsModel extends Model
+class news extends Model
 {
     public function __construct()
     {
@@ -8,7 +8,7 @@ class newsModel extends Model
         DB::setTable("news");
     }
 
-    public function createNews($name, $text)
+    public function create($name, $text)
     {
         DB::insert(array('name' => $name, 'text' => $text));
     }

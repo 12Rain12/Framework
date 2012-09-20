@@ -3,14 +3,14 @@
 class indexController extends Controller
 {
 
-function __construct()
-{
-    parent::__construct();
-}
+    function __construct()
+    {
+        parent::__construct();
+    }
 
-public function index()
-{
-    $this->View->render('index', 'index');
-}
+    public function index()
+    {
+        $this->render('index');
+    }
 
 }

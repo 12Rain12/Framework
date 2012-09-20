@@ -10,7 +10,7 @@ class bootstrap
         $url = explode('/', $url);
         if(empty($url[0])){
             $url[0] = 'index';
-    }
+        }
 
 
         moduleManager::registrationModules();
