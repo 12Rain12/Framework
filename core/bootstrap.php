@@ -11,6 +11,7 @@ class bootstrap
         }
 
         moduleManager::registrationModules();
+        moduleManager::registrationModules();
         moduleManager::LoadModule($url);
     }
 }

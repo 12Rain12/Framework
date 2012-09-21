@@ -14,9 +14,15 @@ class newsController extends Controller
 
     public function create()
     {
-        $this->render('create');
-        if($_POST['act']){
+       if($_POST['act']){
+       $name = validation::filter($_POST['name']);
+       $text = validation::filter($_POST['text']);
 
-        }
+           if(!empty($name) && !empty($text)){
+              news::create($name, $text);
+           }
+       }else{
+           $this->render('create');
+       }
     }
 }

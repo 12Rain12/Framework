@@ -8,17 +8,17 @@ class news extends Model
         DB::setTable("news");
     }
 
-    public function create($name, $text)
+    public static function create($name, $text)
     {
         DB::insert(array('name' => $name, 'text' => $text));
     }
 
-    public function delete($id)
+    public static function delete($id)
     {
         DB::delete(array('id' => $id));
     }
 
-    public function edit($id, $name, $text)
+    public static function edit($id, $name, $text)
     {
         DB::update(array('name' => $name, 'text' => $text), array('id' => $id));
     }

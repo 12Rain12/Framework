@@ -81,4 +81,12 @@ class moduleManager
         }
         return self::$check;
     }
+
+    public static function requireAllModels()
+    {
+    foreach(self::$modules as $value)
+    {
+        require 'modules/' . $value . '/models/' . $value . '.php';
+    }
+    }
 }
