@@ -28,4 +28,10 @@ class news extends Model
         DB::select('id,name,text', array('id' => $id));
         return DB::getResult();
     }
+
+    public static function read()
+    {
+        DB::select('name,text');
+        DB::getResult();
+    }
 }

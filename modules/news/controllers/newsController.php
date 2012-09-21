@@ -30,16 +30,18 @@ class newsController extends Controller
 
            if(!empty($name) && !empty($text)){
                news::create($name, $text);
+               header('Location: http://localhost/Framework/news');
+           }else{
+               echo "Заполните все поля формы";
            }
 
-           header('Location: http://localhost/Framework/news');
-       }else{
-           echo "ek";
+
        }
     }
 
-    public function edit()
+    public function read()
     {
-
+    $result = news::read();
+    $this->smarty->assign('news', $result);
     }
 }

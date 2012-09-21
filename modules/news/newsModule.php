@@ -9,8 +9,10 @@ class newsModule
         $controller->index();
         $url = url::getModuleName();
 
-        if(isset($url[1]))
-        $controller->choiceMethod($url[1]);
-
+        if (isset($url[1])) {
+            $controller->choiceMethod($url[1]);
+        }else{
+            $controller->read();
+        }
     }
 }
