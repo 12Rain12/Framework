@@ -43,5 +43,19 @@ class newsController extends Controller
     {
     $result = news::read();
     $this->smarty->assign('news', $result);
+    $this->smarty->display('modules/news/views/read.tpl');
     }
+
+    public function delete()
+    {
+        news::delete($_GET['id']);
+    }
+
+    public function admin()
+    {
+        $result = news::readAll();
+        $this->smarty->assign('news', $result);
+        $this->smarty->display('modules/news/views/admin.tpl');
+    }
+
 }

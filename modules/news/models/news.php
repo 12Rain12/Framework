@@ -32,6 +32,12 @@ class news extends Model
     public static function read()
     {
         DB::select('name,text');
-        DB::getResult();
+        return DB::getResult();
+    }
+
+    public static function readALL()
+    {
+        DB::select('name,text');
+        return DB::getResult();
     }
 }
