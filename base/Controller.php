@@ -29,10 +29,10 @@ class Controller
     }
 
     public function render($name)
-    {
-        $this->moduleName = $_GET['url'];
-        require 'views/header.tpl';
-        $this->smarty->display('modules/' . $this->moduleName .  '/views/' . $name . '.tpl');
-        require 'views/footer.tpl';
-    }
+{
+    var_dump($this->moduleName = url::getModuleName());
+    $this->smarty->display('views/header.tpl');
+    $this->smarty->display('modules/' . $this->moduleName .  '/views/' . $name . '.tpl');
+    $this->smarty->display('views/footer.tpl');
+}
 }
