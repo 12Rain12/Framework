@@ -30,8 +30,9 @@ class Controller
 
     public function render($name)
 {
-    $this->moduleName = url::getModuleName();
-    $this->smarty->display('views/header.tpl');
+    $url = url::getModuleName();
+    $this->moduleName = $url[0];
+        $this->smarty->display('views/header.tpl');
     $this->smarty->display('modules/' . $this->moduleName .  '/views/' . $name . '.tpl');
     $this->smarty->display('views/footer.tpl');
 }

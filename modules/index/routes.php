@@ -1,6 +1,6 @@
 <?php
 
 return array(
-    '#^news/?$#',
-    '#^news/index/?$#'
+    '#^index/?$#',
+    '#^index/index/?$#'
 );

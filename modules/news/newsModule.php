@@ -6,8 +6,11 @@ class newsModule
     {
         require 'controllers/newsController.php';
         $controller = new newsController();
-        $controller->loadModel('news');
         $controller->index();
+        $url = url::getModuleName();
+
+        if(isset($url[1]))
+        $controller->choiceMethod($url[1]);
 
     }
 }

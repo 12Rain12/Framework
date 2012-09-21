@@ -2,9 +2,12 @@
 
 class newsController extends Controller
 {
+    public $news;
+
     function __construct()
     {
         parent::__construct();
+        parent::loadModel('news');
     }
 
     public function index()
@@ -12,17 +15,31 @@ class newsController extends Controller
         $this->render('index');
     }
 
+    public function choiceMethod($method)
+    {
+        switch($method){
+            case 'create': $this->create(); break;
+        }
+    }
+
     public function create()
     {
-       if($_POST['act']){
+       if($_POST){
        $name = validation::filter($_POST['name']);
        $text = validation::filter($_POST['text']);
 
            if(!empty($name) && !empty($text)){
-              news::create($name, $text);
+               news::create($name, $text);
            }
+
+           header('Location: http://localhost/Framework/news');
        }else{
-           $this->render('create');
+           echo "ek";
        }
+    }
+
+    public function edit()
+    {
+
     }
 }
