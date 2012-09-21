@@ -20,7 +20,7 @@ class Model
 
     public static function paramBD()
     {
-        self::$_config = require '../config.php';
+        self::$_config = require 'config.php';
         return self::$_config['DB'];
     }
 

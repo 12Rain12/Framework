@@ -19,10 +19,10 @@ class Controller
 
     public function loadModel($name)
     {
-        $file = 'modules/' . $name . '/model/' . $name . '.php';
+        $file = 'modules/' . $name . '/models/' . $name . '.php';
         if(file_exists($file)){
             require $file;
-            $this->model = $name();
+            $this->model = new $name();
         }else{
             echo "Несуществует модели с данный именем";
         }
@@ -30,7 +30,7 @@ class Controller
 
     public function render($name)
 {
-    var_dump($this->moduleName = url::getModuleName());
+    $this->moduleName = url::getModuleName();
     $this->smarty->display('views/header.tpl');
     $this->smarty->display('modules/' . $this->moduleName .  '/views/' . $name . '.tpl');
     $this->smarty->display('views/footer.tpl');
