@@ -1,5 +1,8 @@
 <?php
 
+define('URL', 'http://localhost/Framework/');
+
+
 return array(
 
 

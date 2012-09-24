@@ -13,7 +13,7 @@
             <td>{$admin.text}</td>
             <td>
                 <center>
-                    <a href="update.php?id={$admin.id}">Редактировать</a>
+                    <a href="http://localhost/Framework/news/update?id={$admin.id}">Редактировать</a>
                     <a href="delete.php?id={$admin.id}">Удалить</a>
                     <a href="read.php?id={$admin.id}">Просмотреть</a>
                 </center>
