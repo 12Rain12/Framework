@@ -6,7 +6,6 @@
         <td>Text</td>
         <td>Управление</td>
     </tr>
-{if isset($news)}
     {foreach item=admin from=$news}
         <tr>
             <td>{$admin.id}</td>
@@ -21,5 +20,4 @@
             </td>
         </tr>
     {/foreach}
-{/if}
 </table>
