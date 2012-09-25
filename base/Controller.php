@@ -36,4 +36,12 @@ class Controller
     $this->smarty->display('modules/' . $this->moduleName .  '/views/' . $name . '.tpl');
     $this->smarty->display('views/footer.tpl');
 }
+
+    public function renderError($error)
+    {
+        $this->smarty->display('views/header.tpl');
+        $this->smarty->assign('error', $error);
+        $this->smarty->display('modules/error/views/index.tpl');
+        $this->smarty->display('views/footer.tpl');
+    }
 }
