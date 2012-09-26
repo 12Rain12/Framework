@@ -1,6 +1,6 @@
 <?php
 
-define('URL', 'http://localhost/Framework/');
+define('URL', $_SERVER['DOCUMENT_ROOT'] . '/Framework/');
 
 
 return array(

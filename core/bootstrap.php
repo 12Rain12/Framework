@@ -5,7 +5,7 @@ class bootstrap
 {
     public function __construct()
     {
-        $url = url::getModuleName();
+        $url = url::getUrl();
         if(empty($url[0])){
             $url[0] = 'index';
         }

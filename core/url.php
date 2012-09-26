@@ -3,7 +3,7 @@
 class url{
 
 
-    public static function getModuleName()
+    public static function getUrl()
     {
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
