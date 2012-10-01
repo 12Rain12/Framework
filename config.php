@@ -1,6 +1,6 @@
 <?php
 
-define('URL', $_SERVER['DOCUMENT_ROOT'] . '/Framework/');
+//define('URL', $_SERVER['DOCUMENT_ROOT'] . '/Framework/');
 
 
 return array(
@@ -22,7 +22,8 @@ return array(
      */
     'Module' => array(
         'index',
-        'news'
+        'news',
+        'user'
     )
 
 );

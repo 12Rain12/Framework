@@ -1,8 +1,11 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Evgeniy
- * Date: 25.09.12
- * Time: 19:21
- * To change this template use File | Settings | File Templates.
- */
+
+class userModule
+{
+ public function __construct()
+ {
+     require 'controllers/userController.php';
+     $controller = new userController();
+     $controller->index();
+ }
+}

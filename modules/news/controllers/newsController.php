@@ -38,7 +38,7 @@ class newsController extends Controller
 
             if (!empty($name) && !empty($text)) {
                 news::create($name, $text);
-                header('Location: ' . URL . 'news');
+                header('Location: http://localhost/Framework/news');
             } else {
                 echo "Заполните все поля формы";
             }
@@ -77,7 +77,7 @@ class newsController extends Controller
             $name = validation::filter($_POST['name']);
             $text = validation::filter($_POST['text']);
             news::edit($_POST['id'], $name, $text);
-            header('Location: ' . URL . 'news');
+            header('Location: http://localhost/Framework/news');
 
         }
     }
